@@ -18,6 +18,7 @@
   - README actualizado; este archivo sirve de guía.
 
 ## Next Data Needed
+
 Ver README sección "Próximos Pasos" para información de negocio a recopilar.
 
 <!-- Remove comments and finalize once all unchecked items are completed. -->

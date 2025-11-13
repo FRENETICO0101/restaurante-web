@@ -1,5 +1,6 @@
 import SectionContainer from '../components/SectionContainer'
-import MenuGrid from '../components/MenuGrid'
+// import MenuGrid from '../components/MenuGrid'
+import MenuTabs from '../components/MenuTabs'
 import SEO from '../components/SEO'
 
 export default function Menu() {
@@ -8,10 +9,10 @@ export default function Menu() {
       <SectionContainer>
         <SEO title="Menú" description="Explora nuestros platos y especialidades." />
         <h1 className="mb-8 text-3xl font-semibold tracking-tight">Menú</h1>
-        <p className="mb-10 max-w-2xl text-neutral-600">
-          Contenido del menú pendiente de información real (categorías, precios, alérgenos).
+        <p className="mb-6 max-w-2xl text-neutral-600">
+          Explora por categoría. Este es un contenido de muestra; sustituiremos con tu menú real.
         </p>
-        <MenuGrid />
+        <MenuTabs />
       </SectionContainer>
     </main>
   )

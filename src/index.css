@@ -4,17 +4,33 @@
 
 /* Custom base styles */
 @layer base {
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', system-ui, sans-serif; }
-  h1, h2, h3 { font-family: 'Poppins', 'Inter', system-ui, sans-serif; }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  }
 }
 
 @layer components {
-  .container-section { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
-  .btn-primary { @apply inline-flex items-center rounded-md bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-600 transition; }
-  .btn-secondary { @apply inline-flex items-center rounded-md border border-neutral-300 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-700 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-400 transition; }
+  .container-section {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex items-center rounded-md bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-amber-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 focus-visible:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center rounded-md border border-neutral-300 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-700 transition hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2;
+  }
 }
 
 @layer utilities {
-  .text-balance { text-wrap: balance; }
+  .text-balance {
+    text-wrap: balance;
+  }
 }

@@ -6,7 +6,11 @@ interface SectionContainerProps {
   children: ReactNode
 }
 
-export default function SectionContainer({ id, className = '', children }: SectionContainerProps) {
+export default function SectionContainer({
+  id,
+  className = '',
+  children,
+}: SectionContainerProps) {
   return (
     <section id={id} className={`container-section py-16 ${className}`}>
       {children}
