@@ -4,7 +4,8 @@ interface SEOProps {
 }
 
 export function SEO({ title, description }: SEOProps) {
-  const fullTitle = title ? `${title} | Restaurante` : 'Restaurante | Sabores Únicos'
+  const brand = "L'MIELE BAKERY & BISTRO"
+  const fullTitle = title ? `${title} | ${brand}` : brand
   return (
     <>
       <title>{fullTitle}</title>

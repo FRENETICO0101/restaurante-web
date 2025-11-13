@@ -16,7 +16,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 w-full border-b border-neutral-200 bg-white/80 backdrop-blur">
       <div className="container-section flex h-16 items-center justify-between">
         <Link to="/" className="font-semibold text-lg tracking-tight">
-          <span className="text-amber-600">Restaurante</span>
+          <span className="text-amber-600">L'MIELE BAKERY &amp; BISTRO</span>
         </Link>
         <nav className="hidden gap-8 md:flex">
           {navItems.map(item => (

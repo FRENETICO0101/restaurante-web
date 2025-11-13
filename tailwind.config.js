@@ -8,12 +8,15 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: '#b45309',
-          dark: '#92400e',
+          honey: '#EAB308',
+          forest: '#166534',
+          earth: '#78350F',
+          cream: '#FAF7F0',
         },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
       },
     },
     container: {
