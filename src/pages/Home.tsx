@@ -5,6 +5,8 @@ import ReservationForm from '../components/ReservationForm'
 import ContactForm from '../components/ContactForm'
 import Reviews from '../components/Reviews'
 import MapEmbed from '../components/MapEmbed'
+import BusinessHours from '../components/BusinessHours'
+import { siteConfig, telHref, whatsappHref } from '../config/site'
 
 export default function Home() {
   return (
@@ -83,14 +85,16 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-semibold tracking-tight">Dónde estamos</h2>
             <p className="mt-4 max-w-prose text-neutral-600">
-              Av. Paseo del Anochecer 341-local 1, Solares Residencial, 45019 Zapopan, Jal.
+              {siteConfig.address}
             </p>
-            <p className="mt-2 text-sm text-neutral-500">Horarios: (pendiente)</p>
+            <div className="mt-4 max-w-sm">
+              <BusinessHours />
+            </div>
             <div className="mt-4 flex gap-4">
-              <a href="tel:+520000000000" className="btn-secondary">Llamar</a>
-              <a href="https://wa.me/520000000000" target="_blank" rel="noreferrer" className="btn-primary">WhatsApp</a>
+              <a href={telHref} className="btn-secondary">Llamar</a>
+              <a href={whatsappHref} target="_blank" rel="noreferrer" className="btn-primary">WhatsApp</a>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Av.%20Paseo%20del%20Anochecer%20341-local%201%2C%20Solares%20Residencial%2C%2045019%20Zapopan%2C%20Jal."
+                href={siteConfig.social.googleMaps}
                 target="_blank"
                 rel="noreferrer"
                 className="btn-secondary"
@@ -99,7 +103,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <MapEmbed />
+          <MapEmbed address={siteConfig.address} />
         </div>
       </SectionContainer>
     </main>

@@ -4,7 +4,7 @@ interface MapEmbedProps {
 }
 
 export default function MapEmbed({
-  address = "Av. Paseo del Anochecer 347-local 1, Solares Residencial, 45019 Zapopan, Jal.",
+  address = "Av. Paseo del Anochecer 341-local 1, Solares Residencial, 45019 Zapopan, Jal.",
   zoom = 15,
 }: MapEmbedProps) {
   const query = encodeURIComponent(address)
