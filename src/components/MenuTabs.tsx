@@ -1,28 +1,15 @@
 import { useState } from 'react'
 import MenuGrid from './MenuGrid'
-
-type MenuItem = { id: string; nombre: string; descripcion: string; precio: number; destacado?: boolean; imagenUrl?: string }
+import { menuData, type MenuItem } from '../data/menu'
 
 const data: Record<string, MenuItem[]> = {
-  Desayunos: [
-    { id: 'd1', nombre: 'Omelette de queso', descripcion: 'Huevos, queso y finas hierbas.', precio: 95, imagenUrl: undefined },
-    { id: 'd2', nombre: 'Waffles miel', descripcion: 'Waffles con miel de la casa.', precio: 85 },
-  ],
-  'All day': [
-    { id: 'a1', nombre: 'Chapatta mixta', descripcion: 'Jamón, queso y aderezo.', precio: 110 },
-    { id: 'a2', nombre: 'Ensalada fresca', descripcion: 'Verdes, queso de cabra y nueces.', precio: 120 },
-  ],
-  Pizza: [
-    { id: 'p1', nombre: 'Pizza margarita', descripcion: 'Clásica con albahaca.', precio: 140, destacado: true },
-    { id: 'p2', nombre: 'Pizza miel y queso', descripcion: 'Toque dulce con queso azul.', precio: 165 },
-  ],
-  Bebidas: [
-    { id: 'b1', nombre: 'Café de especialidad', descripcion: 'Tueste medio, aroma floral.', precio: 55 },
-    { id: 'b2', nombre: 'Limonada miel', descripcion: 'Refrescante con miel.', precio: 60 },
-  ],
+  Desayunos: menuData['Desayunos'],
+  'All day': menuData['All day'],
+  Pizza: menuData['Pizza'],
+  Bebidas: menuData['Bebidas'],
 }
 
-type TabKey = keyof typeof data
+ type TabKey = keyof typeof data
 
 export default function MenuTabs() {
   const [active, setActive] = useState<TabKey>('Desayunos')

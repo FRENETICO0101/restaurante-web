@@ -1,7 +1,7 @@
 interface MenuItem {
   id: string
   nombre: string
-  descripcion: string
+  descripcion?: string
   precio: number
   destacado?: boolean
   imagenUrl?: string
@@ -58,7 +58,9 @@ export default function MenuGrid({ items = placeholders }: { items?: MenuItem[] 
           )}
           <div className="p-5">
             <h3 className="font-semibold text-neutral-800">{item.nombre}</h3>
-            <p className="mt-1 line-clamp-3 text-sm text-neutral-600">{item.descripcion}</p>
+            {item.descripcion && (
+              <p className="mt-1 line-clamp-3 text-sm text-neutral-600">{item.descripcion}</p>
+            )}
             <p className="mt-3 font-medium text-amber-700">
               ${'{'}item.precio.toFixed(2){'}'}
             </p>
